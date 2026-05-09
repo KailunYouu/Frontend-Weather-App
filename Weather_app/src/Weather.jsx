@@ -81,24 +81,18 @@ import {useEffect, useState} from "react"
         setTempIcon("F");
       }
     }
-    /*
-    {fiveDayForecast?.map((index) =>{
-              if(tempIcon == "F"){
-                return(
-                  <p>Date:{index.dt_txt.slice(5,index.dt_txt.length-3)}   Average Temp:{Math.floor(index.main.temp)}*{tempIcon} </p>
-                )
-              }
-              else{
-                return(
-                  <p>Date:{index.dt_txt.slice(5,index.dt_txt.length-3)}   Average Temp:{Math.floor((index.main.temp - 32)/1.8)}*{tempIcon} </p>
-                )
-              }
-            })}
-    */
-    
 
     return(
         <div>
+          <div>
+            <h3>Name: Kailun You</h3>
+            <p>
+              The Product Manager Accelerator Program is designed to support PM professionals through every stage of their careers. From students looking for entry-level jobs to Directors looking to take on a leadership role, our program has helped over hundreds of students fulfill their career aspirations.
+            </p>
+            <p>
+              Our Product Manager Accelerator community are ambitious and committed. Through our program they have learnt, honed and developed new PM and leadership skills, giving them a strong foundation for their future endeavors.
+            </p>
+          </div>
           <input placeholder="Search City" onChange={(e)=> loadLocations(e.target.value)}></input>
             {locationList.map((index)=>
               <button onClick={()=> setLocation(index)}> {index} </button> 
